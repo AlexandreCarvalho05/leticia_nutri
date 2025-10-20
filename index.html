@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Power Noodle — Sabor, Nutrição e Praticidade</title>
+
+<!-- FONTES -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --vermelho: #e63946;
+    --laranja: #ff8c42;
+    --texto: #f5f5f5;
+    --cinza: #1a1a1a;
+    --fundo: #0d0d0d;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+  }
+
+  /* Imagens gerais — responsivas e proporcionais */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  header {
+    background-color: var(--fundo);
+    text-align: center;
+    padding: 80px 20px 60px;
+  }
+
+  /* Logo corrigido */
+  header img {
+    width: 160px;
+    margin-bottom: 20px;
+    filter: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, var(--vermelho), var(--laranja));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 15px;
+  }
+
+  header p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto 25px;
+  }
+
+  .cta-btn {
+    background: linear-gradient(90deg, var(--vermelho), var(--laranja));
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .cta-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+
+  section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    background: linear-gradient(90deg, var(--vermelho), var(--laranja));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .sobre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .sobre img {
+    width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+    object-fit: contain;
+    background: transparent;
+  }
+
+  .sobre-texto {
+    flex: 1;
+    min-width: 280px;
+    color: #ddd;
+  }
+
+  .beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .beneficio {
+    flex: 1 1 240px;
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .beneficio:hover {
+    transform: translateY(-4px);
+    background: #2a2a2a;
+  }
+
+  /* CORRIGIDO: imagens coloridas (sem filtro invert) */
+  .beneficio img {
+    width: 80px;
+    margin: 0 auto 10px;
+    filter: none;
+  }
+
+  .avaliacoes {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .avaliacoes p {
+    max-width: 800px;
+    margin: 10px auto;
+    font-style: italic;
+    color: #ccc;
+  }
+
+  .cadastro {
+    background-color: var(--fundo);
+    text-align: center;
+    padding: 70px 20px;
+    border-top: 2px solid var(--laranja);
+  }
+
+  .cadastro h2 {
+    background: linear-gradient(90deg, var(--vermelho), var(--laranja));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .cadastro a button {
+    background: linear-gradient(90deg, var(--vermelho), var(--laranja));
+    color: white;
+    padding: 14px 26px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+  }
+
+  .cadastro a button:hover {
+    transform: scale(1.07);
+  }
+
+  footer {
+    background: linear-gradient(90deg, var(--vermelho), var(--laranja));
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 800px) {
+    .sobre {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .sobre img {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="img/logo.png" alt="Logo Power Noodle">
+  <h1>Power Noodle — Sabor, Nutrição e Praticidade</h1>
+  <p>O primeiro miojo proteico, com menos sódio e muito mais sabor. Feito para quem vive na correria, mas não abre mão de comer bem.</p>
+  <button class="cta-btn" onclick="document.getElementById('cadastro').scrollIntoView({behavior: 'smooth'})">
+    Quero experimentar 🍜
+  </button>
+</header>
+
+<section>
+  <h2>O que é o Power Noodle?</h2>
+  <div class="sobre">
+    <img src="img/produto.png" alt="Copo Power Noodle">
+    <div class="sobre-texto">
+      <p>O Power Noodle é um macarrão instantâneo <strong>rico em proteínas e com 30% menos sódio</strong> que os miojos comuns. Com preparo em apenas 5 minutos, ele entrega sabor, nutrição e praticidade no mesmo copo.</p>
+      <p>Feito para estudantes, profissionais e pessoas com rotina agitada, é a opção perfeita para quem busca uma alimentação equilibrada — sem complicação.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Por que escolher o Power Noodle?</h2>
+  <div class="beneficios">
+    <div class="beneficio">
+      <img src="img/power.png" alt="Ícone proteína">
+      <h3 style="color: var(--vermelho)">Mais proteína</h3>
+      <p>Fortalece seu corpo e aumenta a saciedade com alto teor proteico.</p>
+    </div>
+
+    <div class="beneficio">
+      <img src="img/pronto.png" alt="Ícone rápido">
+      <h3 style="color: var(--laranja)">Pronto em 5 minutos</h3>
+      <p>Ideal para quem vive na correria e precisa de praticidade sem abrir mão da qualidade.</p>
+    </div>
+
+    <div class="beneficio">
+      <img src="img/salero.png" alt="Ícone saudável">
+      <h3 style="color: var(--vermelho)">Menos sódio</h3>
+      <p>Reduz o consumo de sal sem perder o sabor — uma escolha mais saudável para o seu dia.</p>
+    </div>
+
+    <div class="beneficio">
+      <img src="img/sustentavel.png" alt="Ícone sustentabilidade">
+      <h3 style="color: var(--laranja)">Sustentável</h3>
+      <p>Cuida do planeta enquanto cuida de você. Embalagem reciclável e ecológica.</p>
+    </div>
+  </div>
+</section>
+
+<section class="avaliacoes">
+  <h2>O que as pessoas estão dizendo 💬</h2>
+  <p>“Perfeito para a faculdade! É rápido, gostoso e me deixa sem culpa.” — <strong>Laura, 21 anos</strong></p>
+  <p>“Não vivo mais sem! O Power Noodle virou meu lanche de trabalho.” — <strong>Rafael, 28 anos</strong></p>
+</section>
+
+<section id="cadastro" class="cadastro">
+  <h2>Quer ser o primeiro a provar?</h2>
+  <p>Cadastre-se e entre para a lista de espera do lançamento oficial.</p>
+  <a href="https://docs.google.com/forms/d/1wa7JHbOWH6ds94s9c-4IQGpxvncAVi2aA6ORokugY5w/edit" target="_blank">
+    <button type="button">Quero participar 🚀</button>
+  </a>
+</section>
+
+<footer>
+  <p>© 2025 Power Noodle | Nutrição inteligente para sua rotina</p>
+</footer>
+
+</body>
+</html>
